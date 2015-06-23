@@ -12,8 +12,8 @@ A solução é o Elementary Tweaks. Ele permite, entre outras coisas, mudança d
 
 Para instalar o Elementary Tweaks, abra o terminal e digite:
 
-    $ sudo apt-add-repository ppa:versable/elementary-update
-    $ sudo apt-get update
-    $ sudo apt-get install elementary-tweaks
+    sudo apt-add-repository ppa:versable/elementary-update
+    sudo apt-get update
+    sudo apt-get install elementary-tweaks
 
 Após instalado ele se integra ao Switchboard, o “Painel de Controle” do Luna, onde vai surgir o item “Tweaks”.

@@ -28,20 +28,29 @@
 		<div class="page-content">
 			<div class="wrapper">
 				<div class="content">
+					<h3 class="session-header">Últimos Posts</h3>
 					<div class="posts">
-						<h3 class="session-header">Últimos Posts</h3>
 						{% for post in site.posts %}
 						  	<div class="post">
-						    	<h4 class="post-title">
-						    		<a href="{{ post.url }}">
-						    			{{ post.title }}
-					    			</a>
-					    		</h4>
-						    	<p class="post-excerpt">
-						    		{{ post.excerpt }}
-						    	</p>
+						  		<div class="inner">
+							  		<div class="post-category">
+							  			<div class="thumb">
+							  				<img src="{{ site.baseurl }}/assets/images/cat-{{ post.categories | first }}.png" />
+							  			</div>
+							  			<div class="label">
+							  				{{ post.categories | first | upcase }}
+						  				</div>
+						  			</div>
+							    	<h4 class="post-title">
+							    		<a href="{{ post.url }}">
+							    			{{ post.title }}
+						    			</a>
+						    		</h4>
+							    	<p class="post-excerpt">
+							    		{{ post.excerpt }}
+							    	</p>
+						    	</div>
 						  	</div>
-						  	<hr />
 					  	{% endfor %}
 					</div>
 				</div>
