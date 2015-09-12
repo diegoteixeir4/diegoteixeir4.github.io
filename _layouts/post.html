@@ -39,20 +39,12 @@
 						<p class="text-muted">Publicado em {{ page.date | date: "%d/%m/%Y" }}.</p>
 						{{ content }}
 					</div>
-					
+
 					<h3 class="session-header">Últimos Posts</h3>
 					<div class="posts">
 						{% for post in site.related_posts %}
 						  	<div class="post">
 						  		<div class="inner">
-							  		<div class="post-category">
-							  			<div class="thumb">
-							  				<img src="{{ site.baseurl }}/assets/images/cat-{{ post.categories | first }}.png" />
-							  			</div>
-							  			<div class="label">
-							  				{{ post.categories | first | upcase }}
-						  				</div>
-						  			</div>
 							    	<h4 class="post-title">
 							    		<a href="{{ post.url }}">
 							    			{{ post.title }}
