@@ -1,4 +1,3 @@
-@import "http://fonts.googleapis.com/css?family=Ubuntu:300,500";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -702,6 +701,58 @@ address {
   margin-bottom: 20px;
   font-style: normal;
   line-height: 1.42857143;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+kbd {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #ffffff;
+  background-color: #333333;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: bold;
+  box-shadow: none;
+}
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+pre code {
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border-radius: 0;
+}
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
 }
 table {
   background-color: transparent;
@@ -1517,13 +1568,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .panel-body:before,
 .panel-body:after,
 .modal-footer:before,
-.modal-footer:after,
-.wrapper:before,
-.wrapper:after,
-.page-content:before,
-.page-content:after,
-.posts:before,
-.posts:after {
+.modal-footer:after {
   content: " ";
   display: table;
 }
@@ -1540,206 +1585,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse:after,
 .pager:after,
 .panel-body:after,
-.modal-footer:after,
-.wrapper:after,
-.page-content:after,
-.posts:after {
+.modal-footer:after {
   clear: both;
-}
-body {
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 300;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-weight: 500;
-}
-.wrapper {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.page-content {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 960px;
-}
-.page-content > .navbar-header,
-.page-content > .navbar-collapse {
-  margin-right: -15px;
-  margin-left: -15px;
-}
-@media (min-width: 768px) {
-  .page-content > .navbar-header,
-  .page-content > .navbar-collapse {
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-@media (min-width: 992px) {
-  .page {
-    padding-left: 320px;
-  }
-}
-.header {
-  background-color: #1E1E1E;
-  text-align: center;
-  padding: 30px 0;
-  margin: 0;
-}
-@media (min-width: 992px) {
-  .header {
-    z-index: 1000;
-    position: fixed;
-    left: 0;
-    width: 300px;
-    height: 100%;
-    padding: 30px;
-  }
-}
-.header h1 {
-  color: #e7e7e7;
-  font-size: 28px;
-}
-.header h1 small {
-  display: block;
-  margin-top: 4px;
-}
-.header .avatar img {
-  border-radius: 50%;
-  width: 140px;
-}
-.header .menu li a {
-  color: #777;
-  text-decoration: none;
-  font-size: 22px;
-}
-.header .menu li a:hover {
-  color: #e7e7e7;
-}
-@media (max-width: 991px) {
-  .header .menu {
-    position: relative;
-    margin-top: 50px;
-    padding-left: 0;
-    list-style: none;
-    margin-left: -5px;
-  }
-  .header .menu > li {
-    display: inline-block;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  .header .menu li a span {
-    display: block;
-    font-size: 12px;
-  }
-}
-@media (min-width: 992px) {
-  .header .menu {
-    padding-left: 0;
-    list-style: none;
-    margin-top: 40px;
-    margin-left: 26px;
-  }
-  .header .menu li {
-    text-align: left;
-  }
-  .header .menu li a {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 16px;
-  }
-}
-.content {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 1200px) {
-  .content {
-    float: left;
-    width: 100%;
-  }
-}
-.session-header {
-  font-size: 20px;
-  text-transform: uppercase;
-  color: #aaa;
-  border-bottom: 1px solid #eee;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-.content-body {
-  margin-bottom: 60px;
-  font-size: 16px;
-}
-.content-body p {
-  line-height: 140%;
-  margin-bottom: 20px;
-}
-.content-body p code {
-  background-color: #eee;
-  padding: 2px 4px;
-  font-size: 90%;
-  color: #555;
-}
-.content-body .highlight {
-  margin: 30px 0;
-  font-size: 14px;
-}
-.content-body .highlight code {
-  padding: 10px 20px;
-  display: block;
-}
-.content-header {
-  text-align: center;
-  padding: 10px 50px;
-}
-.content-header h1 {
-  color: #333;
-  font-size: 42px;
-}
-.content-header hr {
-  border: 0;
-  height: 5px;
-  width: 100px;
-  background-color: #f90;
-  margin-bottom: 30px;
-}
-.posts {
-  margin-left: -15px;
-  margin-right: -15px;
-}
-.posts .post {
-  position: relative;
-  min-height: 1px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-@media (min-width: 1200px) {
-  .posts .post {
-    float: left;
-    width: 100%;
-  }
-}
-.posts .post .inner {
-  padding: 0 0 20px;
-  margin: 0 20px 20px;
-  border-bottom: 1px solid #eee;
-}
-.posts .post .inner .post-title {
-  font-size: 24px;
 }

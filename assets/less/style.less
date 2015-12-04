@@ -96,9 +96,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .content {
 	.make-lg-column(12);
-	pre {
-		padding: 20px;
-	}
 }
 
 .session-header {
@@ -112,6 +109,27 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .content-body {
 	margin-bottom: 60px;
+	font-size: 16px;
+	p {
+		line-height: 140%;
+		margin-bottom: 20px;
+
+		code {
+			background-color: #eee;
+			padding: 2px 4px;
+			font-size: 90%;
+			color: #555;
+		}
+	}
+
+	.highlight {
+		margin: 30px 0;
+		font-size: 14px;
+		code {
+			padding: 10px 20px;
+			display: block;
+		}
+	}
 }
 
 .content-header {
@@ -120,10 +138,6 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	h1 {
 		color: #333;
 		font-size: 42px;
-	}
-	p {
-		.lead;
-		.text-muted;
 	}
 	hr {
 		border: 0;

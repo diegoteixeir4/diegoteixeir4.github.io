@@ -9,6 +9,9 @@
 	<!-- Bootstrap -->
 	<link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
 
+	<!-- Rouge -->
+	<link href="{{ site.baseurl }}/assets/css/syntax.css" rel="stylesheet">
+
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -29,9 +32,6 @@
 						<h1>
 							{{ page.title}}
 						</h1>
-						<p>
-							{{ page.excerpt }}
-						</p>
 						<hr />
 					</div>
 
@@ -40,23 +40,22 @@
 						{{ content }}
 					</div>
 
-					<h3 class="session-header">Últimos Posts</h3>
-					<div class="posts">
-						{% for post in site.related_posts %}
-						  	<div class="post">
-						  		<div class="inner">
-							    	<h4 class="post-title">
-							    		<a href="{{ post.url }}">
-							    			{{ post.title }}
-						    			</a>
-						    		</h4>
-							    	<p class="post-excerpt">
-							    		{{ post.excerpt }}
-							    	</p>
-						    	</div>
-						  	</div>
-					  	{% endfor %}
-					</div>
+
+					{% if page.comments %}
+
+						<div id="disqus_thread"></div>
+						<script>
+						    (function() {
+						        var d = document, s = d.createElement('script');
+						        s.src = '//diegoteixeira.disqus.com/embed.js';
+						        s.setAttribute('data-timestamp', +new Date());
+						        (d.head || d.body).appendChild(s);
+						    })();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+					{% endif %}
+
 				</div>
 			</div>
 		</div>
