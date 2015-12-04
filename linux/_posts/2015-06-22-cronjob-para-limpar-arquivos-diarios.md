@@ -8,7 +8,7 @@ As vezes, é necessário manter em alguma pasta arquivos de backup diários, ger
 
 No caso dos arquivos de log, adicione uma linha como esta no final do arquivo `/etc/crontab`:
 
-{% highlight shell %}
+{% highlight bash %}
 30  4  *  *  *  username  find /logs/dir/*.log -mtime +10 | xargs rm
 {% endhighlight %}
 
@@ -16,7 +16,7 @@ Aqui estamos dizendo para que todo dia às 4:30 o cron execute um comando `find`
 
 O resultado do `find` é algo neste formato:
 
-{% highlight shell %}
+{% highlight bash %}
 /logs/dir/app-2015-06-10.log
 /logs/dir/app-2015-06-11.log
 /logs/dir/app-2015-06-12.log
@@ -26,7 +26,7 @@ O parametro `-mtime` indica que queremos arquivos apenas com a data de modifica�
 
 O `xargs` vai utilizar cada linha desta saída como argumento do `rm`, resultando em:
 
-{% highlight shell %}
+{% highlight bash %}
 rm /logs/dir/app-2015-06-10.log
 rm /logs/dir/app-2015-06-11.log
 rm /logs/dir/app-2015-06-12.log
@@ -34,7 +34,7 @@ rm /logs/dir/app-2015-06-12.log
 
 Para backups, se você mantem em um diretório os resultados diários de um dump do banco de dados com `mysqldump` e uma cópia compactada com o `zip` da pasta de uploads de um site, pode adicionar ao cron algo como isto:
 
-{% highlight shell %}
+{% highlight bash %}
 30  4  *  *  *  username  find /backup/dir/* -mtime +10 | egrep '(.zip|.sql)$' | xargs rm
 {% endhighlight %}
 
