@@ -28,7 +28,6 @@
         <div class="page-content">
             <div class="wrapper">
                 <div class="content">
-                    <h3 class="session-header">Últimos Posts</h3>
                     <div class="posts">
                         {% for post in site.posts %}
                               <div class="post">
@@ -38,9 +37,11 @@
                                             {{ post.title }}
                                         </a>
                                     </h4>
-                                    <p class="post-excerpt">
+                                    <div class="post-excerpt">
                                         {{ post.excerpt }}
-                                    </p>
+                                    </div>
+                                    <p class="meta">{{ post.date | date_to_string }} 
+                                    em <span class="category">{{ post.categories | first }}</span></p>
                                 </div>
                               </div>
                           {% endfor %}

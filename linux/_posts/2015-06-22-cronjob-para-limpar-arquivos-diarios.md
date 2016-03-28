@@ -4,7 +4,9 @@ title: Criando um cronjob para limpar arquivos diários
 comments: true
 ---
 
-As vezes, é necessário manter em alguma pasta arquivos de backup diários, gerados por ferramentas como o `mysqldump`, `zip` etc. Algumas aplicações também criam arquivos de log diários, ex. `logfile-2015-06-22.log`. O ideal no caso dos logs é alterar o comportamento da aplicação, para que crie apenas um arquivo de log, e utilizar a ferramenta `logrotate` ou algum utilitário de log para manter o tamanho do arquivo sob controle. Como o ideal nem sempre é possível, também podemos utilizar o `find` e um cronjob para não deixar os logs neste formato acumularem.
+As vezes, é necessário manter em alguma pasta arquivos de backup diários, gerados por ferramentas como o `mysqldump`, `zip` etc. Algumas aplicações também criam arquivos de log diários, ex. `logfile-2015-06-22.log`.
+
+O ideal no caso dos logs é alterar o comportamento da aplicação, para que crie apenas um arquivo de log, e utilizar a ferramenta `logrotate` ou algum utilitário de log para manter o tamanho do arquivo sob controle. Como o ideal nem sempre é possível, também podemos utilizar o `find` e um cronjob para não deixar os logs neste formato acumularem.
 
 No caso dos arquivos de log, adicione uma linha como esta no final do arquivo `/etc/crontab`:
 
