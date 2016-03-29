@@ -1721,12 +1721,13 @@ a.content-header .meta .category:focus {
 }
 .posts .post .inner .post-title {
   font-size: 24px;
-}
-.posts .post .inner .post-excerpt {
-  color: #777;
+  margin: 0;
+  padding: 0;
 }
 .posts .post .meta {
   font-size: 13px;
+  margin: 0 0 6px;
+  padding: 0;
   color: #777777;
 }
 .posts .post .meta .category {
