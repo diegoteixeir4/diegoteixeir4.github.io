@@ -1,71 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{ page.title }} | Diego Teixeira</title>
+---
+layout: default
+archive: true
+---
 
-	<!-- Bootstrap -->
-	<link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
+<article class="post">
+    <header>
+        <h1>{{ page.title }}</h1>
+        <h2 class="headline">{{ page.date | date:"%B %-d, %Y" }}</h2>
+    </header>
+    <section id="post-body">
+        {{content}}
+    </section>
+</article>
+<footer id="post-meta" class="clearfix">
+    <a href="http://twitter.com/{{ site.authorTwitter }}">
+        <img class="avatar" src="{{ site.baseurl }}assets/images/avatar.png">
+        <div>
+            <span class="dark">{{ site.author }}</span>
+            <span>{{ site.description }}</span>
+        </div>
+    </a>
 
-	<!-- Rouge -->
-	<link href="{{ site.baseurl }}/assets/css/syntax.css" rel="stylesheet">
+    <section id="sharing">
+        {% include share.html %}
+    </section>
+</footer>
 
-	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
+<!-- Disqus comments -->
+{% if site.disqus %}
+    <div class="archive readmore">
+        <h3>Comments</h3>
+        {% include disqus.html %}
+    </div>
+{% endif %}
 
-	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-</head>
-<body>
+<!-- Archive post list -->
+{% if page.archive %}
+    <ul id="post-list" class="archive readmore">
+        <h3>Read more</h3>
+        {% for post in site.posts %}
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url | remove_first: '/' }}">{{ post.title }}<aside class="dates">{{ post.date | date:"%b %d" }}</aside></a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
 
-	<div class="page">
-		{% include header.html %}
-		<div class="page-content">
-			<div class="wrapper">
-				<div class="content">
-					<div class="content-header">
-						<p class="meta">{{ page.date | date_to_string }} 
-						em <span class="category">{{ page.categories | first }}</span></p>
-						<h1>
-							{{ page.title}}
-						</h1>
-						<hr />
-					</div>
 
-					<div class="content-body">
-						{{ content }}
-					</div>
 
-					<div class="content-body">
-						{% if page.comments %}
-
-							<div id="disqus_thread"></div>
-							<script>
-							    (function() {
-							        var d = document, s = d.createElement('script');
-							        s.src = '//diegoteixeira.disqus.com/embed.js';
-							        s.setAttribute('data-timestamp', +new Date());
-							        (d.head || d.body).appendChild(s);
-							    })();
-							</script>
-							<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-						{% endif %}
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-</body>
-</html>
