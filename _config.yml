@@ -1,6 +1,6 @@
 name: Diego Teixeira
-description: Desenvolvedor Web
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+description: desenvolvedor web
+meta_description: ""
 
 aboutPage: true
 
@@ -12,13 +12,13 @@ paginate: 20
 baseurl: /
 domain_name: 'http://diegoteixeira.me'
 google_analytics: 'UA-XXXXXXXX-X'
-disqus: false
-disqus_shortname: 'your-disqus-shortname'
+disqus: true
+disqus_shortname: 'diegoteixeira'
 
 # Details for the RSS feed generator
 url:            'http://diegoteixeira.me'
 author:         'Diego Teixeira'
-authorTwitter:  '@diegoteixeir4'
+authorTwitter:  'diegoteixeir4'
 
 permalink:       /:year/:title/
 

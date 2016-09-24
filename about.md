@@ -1,9 +1,10 @@
 ---
-title: About
+title: Sobre
 permalink: about/
 profile: true
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+Desenvolvedor desde 2003, já atuei em projetos de sistemas de CRM, sites,
+e‐commerce, blogs, CMS e todo tipo de aplicações para web.
 
 {% include footer.html %}

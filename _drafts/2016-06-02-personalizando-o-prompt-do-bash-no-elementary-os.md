@@ -1,7 +1,7 @@
 ---
-layout: post
 title: Alterando o prompt do terminal no Elementary OS
-comments: true
+date: 2016-06-02
+description:
 ---
 
 ## Seu terminal é o Bash?
