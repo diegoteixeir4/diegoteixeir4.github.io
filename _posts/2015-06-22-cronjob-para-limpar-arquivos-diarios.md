@@ -1,7 +1,6 @@
 ---
 title: Cronjob para limpar arquivos diários
 date: 2016-06-02 12:20:00
-description: Limitando a quantidade de arquivos de log e backup com crontab
 ---
 
 As vezes, é necessário manter em alguma pasta arquivos de backup diários, gerados por ferramentas como o `mysqldump`, `zip` etc. Algumas aplicações também criam arquivos de log diários, ex. `logfile-2015-06-22.log`.
